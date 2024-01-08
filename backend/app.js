@@ -13,7 +13,7 @@ connectDb();
 
 // route
 app.use("/api/projects", require("./routes/projects.routes.js"));
-app.use("/api/projects", require("./routes/projects.routes.js"));
+app.use("/new/user", require("./routes/user.route.js"));
 
 
 app.listen(PORT, () => {

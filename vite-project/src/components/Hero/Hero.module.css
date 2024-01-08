@@ -1,0 +1,88 @@
+/* HERO SECTION  */
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  width: 80%;
+}
+.mySection {
+  width: 40%;
+  margin-top: 6rem;
+}
+.scrollingSection {
+  width: 50%;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  margin-top: 6rem;
+}
+.aboutMe {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.sectionsName {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.line {
+  width: 10px;
+  height: 2px;
+  background-color: #e2e8f0;
+}
+.sectionsName:hover {
+  .line {
+    width: 65px;
+    transition: all 0.31s ease-in;
+  }
+}
+.projectSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.projectArchive {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* marquee Section  */
+.marqueeSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.techStack {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgb(240, 248, 255, 0.1);
+  padding: 25px 0px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.techs {
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0px 25px;
+  letter-spacing: 1px;
+  animation: marquee 2s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

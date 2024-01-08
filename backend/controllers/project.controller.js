@@ -6,7 +6,7 @@ const projectModel = require("../model/project.model.js");
 const getAllProject = async (req, res) => {
   const findProjects = await projectModel.find();
   if (!findProjects) {
-    return res.status(401).json({ message: "No projects found" });
+    return res.status(404).json({ message: "Projects Not Found" });
   }
   res.status(200).json(findProjects);
 };
