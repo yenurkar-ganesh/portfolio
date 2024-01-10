@@ -1,0 +1,110 @@
+.archiveSection {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+}
+.archiveInfo {
+  margin-top: 6rem;
+}
+.backToHome {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: aliceblue;
+}
+.backToHome:hover {
+  .backArrow {
+    transform: scale(1.2);
+    color: #5eead4;
+  }
+}
+.projectHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 52px;
+}
+/* .projectSection {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 4rem;
+}
+.projectTable {
+ width: 100%;
+}
+th{
+    width: 25%;
+} */
+/* .projectCard {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+} */
+/* .stackSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+} */
+.stackTD {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.projectStack {
+  background-color: rgb(94, 234, 212, 0.11);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #5eead4;
+}
+
+.projectTable {
+  width: 100%;
+  margin: auto; /* Center the table on the page */
+  border-collapse: collapse;
+  margin-top: 20px; /* Adjust as needed */
+  border: transparent; /* Transparent table border */
+}
+.tableHead {
+  position: sticky;
+  top: 10px;
+  background-color: rgb(240, 248, 255, 0.01);
+  border-radius: 8px;
+}
+/* Styles for table header */
+.projectTable th {
+  color: white; /* Header text color */
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 120px;
+  border-bottom: 1px solid rgb(240, 248, 255, 0.12);
+}
+/* Styles for table cells */
+.projectTable td {
+  padding: 10px;
+  border: transparent;
+  border-bottom: 1px solid rgb(240, 248, 255, 0.12);
+  padding: 21px 10px;
+  text-align: center;
+}
+/* Styles for links in cells */
+.projectTable a {
+  color: #2196f3; /* Link color */
+  text-decoration: none;
+  align-items: center;
+}
+.projectTable a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

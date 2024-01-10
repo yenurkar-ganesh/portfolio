@@ -4,11 +4,25 @@ const projectModel = require("../model/project.model.js");
 // GET || ALL PROJECTS
 // @routes api/projects
 const getAllProject = async (req, res) => {
-  const findProjects = await projectModel.find();
-  if (!findProjects) {
-    return res.status(404).json({ message: "Projects Not Found" });
+  try {
+    // limiting the project to show
+    let limit = parseInt(req.query.limit, 20); // Parse limit as an integer
+
+    // checking the limit is number or not if not then set default value
+    if (isNaN(limit) || limit <= 0) {
+      limit = 20;
+    }
+    const findProjects = await projectModel.find().limit(limit);
+
+    if (!findProjects || findProjects.length === 0) {
+      return res.status(404).json({ message: "Projects Not Found" });
+    }
+
+    res.status(200).json(findProjects);
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
-  res.status(200).json(findProjects);
 };
 
 // CREATE || CREATE A PROJECT

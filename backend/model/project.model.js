@@ -8,8 +8,8 @@ const projectSchema = mongoose.Schema(
     description: {
       type: String,
     },
-    buildWith :{
-      type : String,
+    buildWith: {
+      type: Array,
     },
     image: {
       type: String,
@@ -17,9 +17,9 @@ const projectSchema = mongoose.Schema(
     linkedInLink: {
       type: String,
     },
-    link:{
-      type:String
-    }
+    link: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

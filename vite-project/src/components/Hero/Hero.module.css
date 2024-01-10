@@ -7,13 +7,15 @@
 }
 .mySection {
   width: 40%;
+  display: flex;
+  flex-direction: column;
   margin-top: 6rem;
+  top: 0;
+  position: sticky;
 }
 .scrollingSection {
   width: 50%;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   flex-direction: column;
   margin-top: 6rem;
 }
@@ -32,11 +34,20 @@
   background-color: #e2e8f0;
 }
 .sectionsName:hover {
+  color: #5eead4;
   .line {
+    background-color: #5eead4;
     width: 65px;
     transition: all 0.31s ease-in;
   }
 }
+.paragraphs {
+  line-height: 1;
+  margin: 5px;
+  padding: 0;
+}
+
+/* PROJECT SECTION  */
 .projectSection {
   width: 100%;
   display: flex;

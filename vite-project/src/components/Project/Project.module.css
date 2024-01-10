@@ -9,14 +9,20 @@
   width: 100%;
   display: flex;
   gap: 15px;
-  background-color: rgb(240, 248, 255, 0.1);
+  background-color: rgb(240, 248, 255, 0.019999);
   border-radius: 8px;
   margin: 0;
   padding: 15px;
+  transform: all 100ms linear ease-in;
 }
 .card:hover {
+  transform: all 300ms linear ease-in;
+  background-color: rgb(240, 248, 255, 0.11);
   .cardImg {
-    outline: 2px solid rgb(211, 211, 211, 0.24);
+    outline: 2px solid rgb(94, 234, 212, 0.74);
+  }
+  .cardTitle {
+    text-decoration: underline #5eead4;
   }
 }
 .cardImg {
@@ -24,26 +30,33 @@
   height: 112px;
   border-radius: 4px;
 }
-.cardInfo{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    padding: 0;
-    margin: 0;
+.cardInfo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  padding: 0;
+  margin: 0;
 }
-.cardTitle{
-    margin: 0;
-    padding: 0;
+.cardTitle {
+  margin: 0;
+  padding: 0;
 }
-.cardDescription{
-    margin: 0;
-    padding: 0;
+.cardDescription {
+  margin: 0;
+  padding: 0;
 }
 .cardStack {
   display: flex;
   margin: 0;
   padding: 0;
   align-items: center;
-  gap: 18px;
+  gap: 8px;
+  margin-top: 5px;
+}
+.stack {
+  background-color: rgb(94, 234, 212, 0.11);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #5eead4;
 }
