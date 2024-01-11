@@ -35,31 +35,15 @@
   align-items: center;
   gap: 52px;
 }
-/* .projectSection {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-top: 4rem;
+.projectLink:hover {
+  .linkIcon {
+    transform: scale(1.25);
+    color: #5eead4;
+  }
 }
-.projectTable {
- width: 100%;
-}
-th{
-    width: 25%;
-} */
-/* .projectCard {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-} */
-/* .stackSection {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-} */
 .stackTD {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }
@@ -69,13 +53,19 @@ th{
   border-radius: 4px;
   color: #5eead4;
 }
+.projectSection {
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
 
 .projectTable {
   width: 100%;
-  margin: auto; /* Center the table on the page */
+  max-width: 100%;
+  margin: auto;
   border-collapse: collapse;
-  margin-top: 20px; /* Adjust as needed */
-  border: transparent; /* Transparent table border */
+  margin-top: 20px;
+  border: transparent;
 }
 .tableHead {
   position: sticky;
@@ -83,15 +73,15 @@ th{
   background-color: rgb(240, 248, 255, 0.01);
   border-radius: 8px;
 }
-/* Styles for table header */
+
 .projectTable th {
-  color: white; /* Header text color */
+  color: white;
   text-align: center;
   font-weight: bold;
   padding: 20px 120px;
   border-bottom: 1px solid rgb(240, 248, 255, 0.12);
 }
-/* Styles for table cells */
+
 .projectTable td {
   padding: 10px;
   border: transparent;
@@ -99,12 +89,11 @@ th{
   padding: 21px 10px;
   text-align: center;
 }
-/* Styles for links in cells */
 .projectTable a {
-  color: #2196f3; /* Link color */
+  color: #2196f3;
   text-decoration: none;
   align-items: center;
 }
 .projectTable a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }

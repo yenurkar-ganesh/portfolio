@@ -15,7 +15,7 @@ const Hero = () => {
 
   useEffect(() => {
     try {
-      fetch(`http://localhost:3100/api/projects?limit=2`)
+      fetch(`http://localhost:3100/api/projects?limit=3`)
         .then((response) => response.json())
         .then((projects) => {
           setProjects(projects);

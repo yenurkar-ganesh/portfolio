@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import classes from "../ProjectArchive/ProjectArchive.module.css";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { FaLinkSlash } from "react-icons/fa6";
 
-const ProjectArchive = ({ title, buildWith, linkedInLink, createdAt }) => {
+const ProjectArchive = ({ title, buildWith, linkedInLink, buildYear }) => {
   const [project, setProject] = useState([]);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const ProjectArchive = ({ title, buildWith, linkedInLink, createdAt }) => {
               {project.length > 0 &&
                 project.map((project, id) => (
                   <tr key={id} className={classes.projectRow}>
-                    <td>{project.createdAt}</td>
+                    <td>{new Date(project.buildYear).getFullYear()}</td>
                     <td>{project.title}</td>
                     <td className={classes.stackTD}>
                       {project.buildWith.map((stack, id) => (
@@ -46,20 +47,24 @@ const ProjectArchive = ({ title, buildWith, linkedInLink, createdAt }) => {
                         </span>
                       ))}
                     </td>
-                    <td>
-                      {project.linkedInLink.startsWith("/") ? (
-                        <Link to={project.linkedInLink}>
-                          {project.linkedInLink}
-                        </Link>
-                      ) : (
-                        <a
-                          href={project.linkedInLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {project.linkedInLink}
-                        </a>
-                      )}
+                    <td className={classes.projectLink}>
+                      <a
+                        href={project.linkedInLink}
+                        target="_blank"
+                        style={{
+                          display: "flex",
+                          gap: "5px",
+                          alignItems: " center",
+                        }}
+                        rel="noopener noreferrer"
+                      >
+                        {" "}
+                        <FaLinkSlash
+                          className={classes.linkIcon}
+                          style={{ width: "25px", height: "25px" }}
+                        />
+                        {project.linkedInLink}
+                      </a>
                     </td>
                   </tr>
                 ))}

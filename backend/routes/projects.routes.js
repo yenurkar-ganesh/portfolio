@@ -1,3 +1,6 @@
+const express = require("express");
+const router = express.Router();
+const multer = require("multer");
 const {
   getAllProject,
   createProject,
@@ -5,13 +8,21 @@ const {
   updateProject,
   deleteProject,
 } = require("../controllers/project.controller");
-const express = require("express");
-const router = express.Router();
 
-router.route("/").get(getAllProject);
-router.route("/").post(createProject);
-router.route("/:id").get(getOneProject);
-router.route("/:id").put(updateProject);
-router.route("/:id").delete(deleteProject);
+// Multer Configuration
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "-" + file.originalname);
+  },
+});
+
+const upload = multer({ storage: storage });
+
+// Routes
+router.route("/").get(getAllProject).post(upload.single("image"), createProject);
+router.route("/:id").get(getOneProject).put(updateProject).delete(deleteProject);
 
 module.exports = router;

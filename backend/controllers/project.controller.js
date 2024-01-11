@@ -17,7 +17,6 @@ const getAllProject = async (req, res) => {
     if (!findProjects || findProjects.length === 0) {
       return res.status(404).json({ message: "Projects Not Found" });
     }
-
     res.status(200).json(findProjects);
   } catch (error) {
     console.error("Error fetching projects:", error);
@@ -28,14 +27,42 @@ const getAllProject = async (req, res) => {
 // CREATE || CREATE A PROJECT
 // @route api/projects/
 const createProject = async (req, res) => {
-  const { title, description, image, linkedInLink } = req.body;
+  try {
+    console.log("Request body:", req.body); // Check the request body
+    console.log("File:", req.file); // Check the uploaded file details
 
-  if (!title || !description || !image || !linkedInLink) {
-    throw new Error("All Fields are Mandatory.!!");
-    res.status(400);
-  } else {
-    const createNewProject = await projectModel.create(req.body);
+    const {
+      title,
+      description,
+      image,
+      linkedInLink,
+      link,
+      buildYear,
+      buildWith,
+    } = req.body;
+    const { filename } = req.file;
+
+    const parsedArray = JSON.parse(buildWith);
+    console.log("Creating new project with image:", filename);
+    const createNewProject = await projectModel.create({
+      title,
+      image: req.file.filename,
+      description,
+      linkedInLink,
+      buildYear: new Date(buildYear),
+      buildWith: parsedArray,
+    });
+    const responseProject = {
+      ...createNewProject.toJSON(),
+      buildYear: new Date(buildYear).getFullYear().toString(),
+    };
+
+    // console.log("New project created:", createNewProject);
     res.status(201).json(createNewProject);
+    // }
+  } catch (error) {
+    console.error(`Error while Processing a Data!! ${error} `);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 

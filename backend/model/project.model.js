@@ -20,6 +20,9 @@ const projectSchema = mongoose.Schema(
     link: {
       type: String,
     },
+    buildYear: {
+      type : Number
+    }
   },
   { timestamps: true }
 );
