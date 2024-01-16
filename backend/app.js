@@ -10,8 +10,8 @@ app.use(express.json());
 require("dotenv").config();
 app.use(
   cors({
-    Credentials: true,
-    origin: `http://localhost:5173`,
+    credentials: true,
+    origin: "http://localhost:5173",
   })
 );
 app.use("/uploads", express.static(__dirname + "/uploads"));

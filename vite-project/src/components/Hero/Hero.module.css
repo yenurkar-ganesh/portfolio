@@ -97,3 +97,52 @@
     transform: translateX(-100%);
   }
 }
+
+/* CONTACT ME  */
+.contactSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.contactInfo {
+  text-align: center;
+  margin: 0px auto;
+}
+.contactTitle,
+.contactMotto {
+  text-align: center;
+}
+.contactOverlay {
+  /* 
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* flex-direction: column; */
+  background-image: url("https://images.unsplash.com/photo-1704999575341-b3b6a8e254d6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45vh;
+  width: 100%;
+  position: relative;
+}
+.overlayInfo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e2e8f0;
+  color: black;
+  padding: 25px;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}

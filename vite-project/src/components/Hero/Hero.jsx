@@ -15,7 +15,7 @@ const Hero = () => {
 
   useEffect(() => {
     try {
-      fetch(`http://localhost:3100/api/projects?limit=3`)
+      fetch(`http://localhost:3100/api/projects?limit=4`)
         .then((response) => response.json())
         .then((projects) => {
           setProjects(projects);
@@ -89,6 +89,21 @@ const Hero = () => {
           <FaNodeJs className={classes.techs} />
           <FaPython className={classes.techs} />
           <IoLogoJavascript className={classes.techs} />
+        </div>
+      </section>
+      <section className={classes.contactSection}>
+        <div className={classes.contactInfo}>
+          <h1 className={classes.contactTitle}>Contact Me 🌟</h1>
+          <p className={classes.contactMotto}>
+            Have a question, collaboration idea, or just want to chat? Drop me
+            an email, and let's make things happen together!
+          </p>
+        </div>
+        <div className={classes.contactOverlay}>
+          <div className={classes.overlayInfo}>
+            <h1>You can do it</h1>
+            <p>Hello there</p>
+          </div>
         </div>
       </section>
       <Footer />

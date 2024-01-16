@@ -26,8 +26,8 @@
   }
 }
 .cardImg {
-  width: 280px;
-  height: 112px;
+  width: 260px;
+  height: 152px;
   border-radius: 4px;
 }
 .cardInfo {
@@ -48,6 +48,7 @@
 }
 .cardStack {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   align-items: center;

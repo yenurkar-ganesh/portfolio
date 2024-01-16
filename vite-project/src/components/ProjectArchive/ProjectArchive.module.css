@@ -3,9 +3,13 @@
   display: flex;
   flex-direction: column;
   margin: 0px auto;
+  position: relative;
 }
 .archiveInfo {
   margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .backToHome {
   width: 100%;
@@ -20,6 +24,17 @@
     transform: scale(1.2);
     color: #5eead4;
   }
+}
+.btn {
+  padding: 5px 18px;
+  border: 0.125rem solid #5eead4;
+  border-radius: 5px;
+  text-decoration: none;
+  color: aliceblue;
+}
+.btn:hover {
+  background-color: rgb(94, 234, 212, 0.22);
+  transition: all 0.3s ease-in-out;
 }
 .projectHeader {
   width: 100%;
@@ -54,15 +69,16 @@
   color: #5eead4;
 }
 .projectSection {
-  width: 80%;
+  width: 100%;
   margin: 0px auto;
   margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
 .projectTable {
   width: 100%;
   max-width: 100%;
-  margin: auto;
+  margin: 0px auto;
   border-collapse: collapse;
   margin-top: 20px;
   border: transparent;
@@ -70,8 +86,8 @@
 .tableHead {
   position: sticky;
   top: 10px;
-  background-color: rgb(240, 248, 255, 0.01);
-  border-radius: 8px;
+  background-color: rgb(240, 248, 255, 0.7);
+  border-radius: 18px;
 }
 
 .projectTable th {

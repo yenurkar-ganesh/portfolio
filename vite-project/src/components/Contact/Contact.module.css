@@ -1,0 +1,71 @@
+.contactSection {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.archiveInfo {
+  margin-top: 6rem;
+}
+.backToHome {
+  text-decoration: none;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.backToHome:hover {
+  color: #5eead4;
+  .backArrow {
+    transform: scale(1.1);
+    color: #5eead4;
+  }
+}
+.contactForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  flex-direction: column;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 900px;
+  height: 100vh;
+  background-color: #fff;
+  color: black;
+  gap: 15px;
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 10vh;
+}
+.inputs {
+  max-width: 80%;
+  width: 80%;
+  padding: 18px;
+  border-radius: 6px;
+  border: 0.0125rem solid lightgray;
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+}
+.inputs:hover {
+  /* background-color: rgb(94, 234, 212, 0.122); */
+  border: 2px solid rgb(94, 234, 212, 0.32);
+}
+.form button {
+  width: 80%;
+  background-color: black;
+  color: aliceblue;
+  padding: 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  margin-top: 1rem;
+  cursor: pointer;
+}

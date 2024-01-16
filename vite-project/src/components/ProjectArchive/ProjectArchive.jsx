@@ -11,18 +11,23 @@ const ProjectArchive = ({ title, buildWith, linkedInLink, buildYear }) => {
     fetch(`http://localhost:3100/api/projects/`)
       .then((response) => response.json())
       .then((project) => setProject(project));
-  });
+  }, []);
   return (
     <>
       <section className={classes.archiveSection}>
         <div className={classes.archiveInfo}>
-          <Link className={classes.backToHome} to="/">
-            <FaArrowLeftLong className={classes.backArrow} />
-            Ganesh Yenurkar
-          </Link>
-          <h1 style={{ fontSize: "2.1rem", color: "aliceblue" }}>
-            All Projects
-          </h1>
+          <div className="backCard">
+            <Link className={classes.backToHome} to="/">
+              <FaArrowLeftLong className={classes.backArrow} />
+              Ganesh Yenurkar
+            </Link>
+            <h1 style={{ fontSize: "2.1rem", color: "aliceblue" }}>
+              All Projects
+            </h1>
+          </div>
+          <div className="createBtn">
+            <Link className={classes.btn} to={'/createProject'}>Create New Project</Link>
+          </div>
         </div>
         <div className={classes.projectSection}>
           <table className={classes.projectTable}>

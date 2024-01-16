@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "../createProject/CreateProject.module.css";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,6 +12,7 @@ const CreateProject = () => {
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
   const [url, setUrl] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -32,6 +33,9 @@ const CreateProject = () => {
 
       if (response.ok) {
         toast.success("Project created successfully!");
+        setTimeout(() => {
+          setRedirect(true);
+        }, 3500);
       } else {
         console.error("Failed to create Project:");
         toast.error("Failed to create a project. Please Try Again.");
@@ -88,7 +92,6 @@ const CreateProject = () => {
               onChange={(event) => setDescription(event.target.value)}
               className={classes.formInput}
               name="4"
-              id=""
               cols="30"
               rows="10"
               required
@@ -105,11 +108,11 @@ const CreateProject = () => {
               className={classes.formInput}
               type="url"
               placeholder="URL of Project"
-              required
             />
             <button>Create Project</button>
           </form>
         </section>
+        {redirect && <Navigate to={"/projectArchive"} />}
       </main>
     </>
   );
