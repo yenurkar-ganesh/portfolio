@@ -1,0 +1,15 @@
+.errorSection {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100vh;
+  align-items: center;
+  margin: 0px auto;
+}
+.errorSection img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+}

@@ -23,19 +23,18 @@
   }
 }
 .contactForm {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px auto;
-  flex-direction: column;
+  gap: 25px;
 }
 .form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 900px;
+  width: 950px;
   height: 100vh;
   background-color: #fff;
   color: black;
@@ -56,7 +55,7 @@
 }
 .inputs:hover {
   /* background-color: rgb(94, 234, 212, 0.122); */
-  border: 2px solid rgb(94, 234, 212, 0.32);
+  border: 2px solid rgba(94, 234, 212, 0.32);
 }
 .form button {
   width: 80%;
@@ -68,4 +67,30 @@
   font-size: 15px;
   margin-top: 1rem;
   cursor: pointer;
+}
+.card {
+  width: 60%;
+}
+.cardIntro{
+  line-height: normal;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+.cardIntro h3{
+  color: #5eead4;
+}
+.card .cardOverlay {
+  background-image: url("/undraw_profile_data_re_v81r.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+}
+.contactInfo {
+  height: 10vh;
+  padding-bottom: 25px;
+  line-height: 12px;
+  /* border-bottom: 0.0125rem solid aliceblue; */
 }

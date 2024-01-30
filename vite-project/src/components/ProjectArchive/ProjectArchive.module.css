@@ -81,13 +81,12 @@
   margin: 0px auto;
   border-collapse: collapse;
   margin-top: 20px;
-  border: transparent;
+  border-left: aliceblue;
 }
 .tableHead {
   position: sticky;
-  top: 10px;
+  top: 15px;
   background-color: rgb(240, 248, 255, 0.7);
-  border-radius: 18px;
 }
 
 .projectTable th {

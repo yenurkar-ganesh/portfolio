@@ -9,6 +9,8 @@ import { BiSolidFileArchive } from "react-icons/bi";
 import { useEffect, useState } from "react";
 import { about } from "../Data/data.js";
 import { Link } from "react-router-dom";
+// import { MdConnectWithoutContact } from "react-icons/md";
+import { MdOutlineDoubleArrow } from "react-icons/md";
 
 const Hero = () => {
   const [projects, setProjects] = useState([]);
@@ -29,9 +31,21 @@ const Hero = () => {
       <section className={classes.heroSection}>
         <div className={classes.mySection}>
           <h1>Ganesh Yenurkar</h1>
-          <p className={classes.aboutMe}>Lead Engineer at Upstatement</p>
+          <p className={classes.aboutMe}>
+            Lead Engineer at{" "}
+            <span style={{ color: "#5eead4", fontWeight: "bold" }}>
+              {" "}
+              #Unknown
+            </span>{" "}
+          </p>
           <p>
-            I build pixel-perfect, accessible products for the web and beyond.
+            I build pixel-perfect, accessible products for the{" "}
+            <span style={{ color: "#5eead4", fontWeight: "bold" }}>web </span>&{" "}
+            <span style={{ color: "#5eead4", fontWeight: "bold" }}>
+              {" "}
+              beyond
+            </span>
+            .
           </p>
         </div>
 
@@ -92,18 +106,43 @@ const Hero = () => {
         </div>
       </section>
       <section className={classes.contactSection}>
+        <div className={classes.contactOverlay}>
+          <div className={classes.overlayInfo}>
+            {/* <h1>Reach Out to Me</h1>
+            <p>
+              Questions? Comments? I'm all ears. Use the form to get in touch
+              with Me.
+            </p> */}
+            {/* <Link to="/contact" className={classes.overlayBtn}>
+              <MdConnectWithoutContact
+                style={{ width: "25px", height: "25px" }}
+              />{" "}
+              Contact Me
+            </Link> */}
+          </div>
+        </div>
         <div className={classes.contactInfo}>
           <h1 className={classes.contactTitle}>Contact Me 🌟</h1>
           <p className={classes.contactMotto}>
             Have a question, collaboration idea, or just want to chat? Drop me
-            an email, and let's make things happen together!
+            an{" "}
+            email
+            
+            , & let's make things happen together!
           </p>
-        </div>
-        <div className={classes.contactOverlay}>
-          <div className={classes.overlayInfo}>
-            <h1>You can do it</h1>
-            <p>Hello there</p>
-          </div>
+          <button className={classes.contactBtn}>
+            <MdOutlineDoubleArrow className={classes.btnArrow} />
+            <Link
+              to={"/contact"}
+              style={{
+                textDecoration: "none",
+                fontSize: "25px",
+                color: "aliceblue",
+              }}
+            >
+              Contact Me
+            </Link>
+          </button>
         </div>
       </section>
       <Footer />

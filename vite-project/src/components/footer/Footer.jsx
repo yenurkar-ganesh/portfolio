@@ -8,11 +8,10 @@ const Footer = () => {
     <section className={classes.footerSection}>
       <div className={classes.card}>
         <div className={classes.socialLinks}>
-          <a href="#">
-            {" "}
+          <a href="https://www.linkedin.com/in/ganesh-yenurkar-374915199/">
             <FaLinkedin className={classes.socialIcons} />{" "}
           </a>
-          <a href="https://www.instagram.com/ganesh.yenurkar_/" target="blank" >
+          <a href="https://github.com/yenurkar-ganesh" target="blank">
             <FaGithub className={classes.socialIcons} />
           </a>
           <a href="/contact">

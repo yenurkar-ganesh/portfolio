@@ -3,6 +3,7 @@ import classes from "../ProjectArchive/ProjectArchive.module.css";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FaLinkSlash } from "react-icons/fa6";
+import Footer from "../footer/Footer.jsx";
 
 const ProjectArchive = ({ title, buildWith, linkedInLink, buildYear }) => {
   const [project, setProject] = useState([]);
@@ -26,7 +27,9 @@ const ProjectArchive = ({ title, buildWith, linkedInLink, buildYear }) => {
             </h1>
           </div>
           <div className="createBtn">
-            <Link className={classes.btn} to={'/createProject'}>Create New Project</Link>
+            <Link className={classes.btn} to={"/createProject"}>
+              Create New Project
+            </Link>
           </div>
         </div>
         <div className={classes.projectSection}>
@@ -77,6 +80,7 @@ const ProjectArchive = ({ title, buildWith, linkedInLink, buildYear }) => {
           </table>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
