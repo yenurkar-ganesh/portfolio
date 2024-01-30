@@ -4,4 +4,4 @@
 Welcome to portflio website that helps to kknow me better Me.
 
 # LayOut My Port
-![Screenshot_20240113_020856](https://github.com/yenurkar-ganesh/portfolio/assets/122092957/5775edb2-a4ac-42a4-9b50-0c96e216f3a1)
+![Screenshot_20240131_125947](https://github.com/yenurkar-ganesh/portfolio/assets/122092957/c516684f-adfd-44d7-89a0-58f7fa5d74c7)
