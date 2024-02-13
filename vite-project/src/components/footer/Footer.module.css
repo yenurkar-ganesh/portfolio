@@ -4,12 +4,14 @@
   gap: 10%;
   margin: 0px auto;
   padding: 50px 0px;
+  border-top: 0.0125rem solid rgb(240, 248, 255, 0.23)
 }
 .card {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
+  margin: 0px auto;
 }
 .socialLinks {
   width: 40%;

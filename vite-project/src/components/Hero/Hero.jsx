@@ -31,13 +31,13 @@ const Hero = () => {
       <section className={classes.heroSection}>
         <div className={classes.mySection}>
           <h1>Ganesh Yenurkar</h1>
-          <p className={classes.aboutMe}>
+          {/* <p className={classes.aboutMe}>
             Lead Engineer at{" "}
             <span style={{ color: "#5eead4", fontWeight: "bold" }}>
               {" "}
               #Unknown
             </span>{" "}
-          </p>
+          </p> */}
           <p>
             I build pixel-perfect, accessible products for the{" "}
             <span style={{ color: "#5eead4", fontWeight: "bold" }}>web </span>&{" "}
@@ -105,30 +105,19 @@ const Hero = () => {
           <IoLogoJavascript className={classes.techs} />
         </div>
       </section>
+
+      {/* CONTACT SECTION  */}
       <section className={classes.contactSection}>
         <div className={classes.contactOverlay}>
-          <div className={classes.overlayInfo}>
-            {/* <h1>Reach Out to Me</h1>
-            <p>
-              Questions? Comments? I'm all ears. Use the form to get in touch
-              with Me.
-            </p> */}
-            {/* <Link to="/contact" className={classes.overlayBtn}>
-              <MdConnectWithoutContact
-                style={{ width: "25px", height: "25px" }}
-              />{" "}
-              Contact Me
-            </Link> */}
-          </div>
+          <div className={classes.overlayInfo}></div>
         </div>
         <div className={classes.contactInfo}>
-          <h1 className={classes.contactTitle}>Contact Me 🌟</h1>
+          <h1 className={classes.contactTitle}>Get In Touch🌟</h1>
           <p className={classes.contactMotto}>
-            Have a question, collaboration idea, or just want to chat? Drop me
-            an{" "}
-            email
-            
-            , & let's make things happen together!
+            I'm actively seeking for new opportunities, my inbox is alway open.
+            Use the link below or Use my contact Form. If you want to ask any
+            question or just say hello. I'll try to get back to you as soon as I
+            can.
           </p>
           <button className={classes.contactBtn}>
             <MdOutlineDoubleArrow className={classes.btnArrow} />

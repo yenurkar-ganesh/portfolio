@@ -85,7 +85,7 @@ const Contact = () => {
               placeholder="Message.."
               name="message"
               cols="30"
-              rows="20"
+              rows="15"
               required
             ></textarea>
 

@@ -86,7 +86,6 @@
   width: 105px;
   height: 105px;
   overflow: hidden;
-  /* white-space: nowrap; */
   margin: 0px 25px;
   letter-spacing: 1px;
   animation: marquee 5s ease-in 1s infinite;
@@ -103,6 +102,7 @@
 /* CONTACT ME  */
 .contactSection {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   margin-top: 7rem;
@@ -157,5 +157,100 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+/* RESPONSIVE DESIGN  */
+
+@media screen and (max-width: 586px) {
+  .heroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: none;
+    top: 50px;
+  }
+  .mySection {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 2vh;
+    margin-bottom: 1rem;
+  }
+  .scrollingSection {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  .aboutMe {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .sectionsName {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* PROJECT SECTION  */
+  .projectSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* marquee Section  */
+  .marqueeSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .techStack {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(240, 248, 255, 0.1);
+    padding: 25px 0px;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .techs {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(150%);
+    }
+  }
+
+  /* CONTACT ME  */
+  .contactSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 7rem;
+    gap: 25px;
+    margin: 0px auto;
+  }
+
+  .contactOverlay {
+    margin-top: 2vh;
+    height: 50vh;
+    width: 100%;
   }
 }

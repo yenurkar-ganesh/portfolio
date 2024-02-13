@@ -7,7 +7,6 @@ import Footer from "../footer/Footer.jsx";
 
 const ProjectArchive = ({ title, buildWith, linkedInLink, buildYear }) => {
   const [project, setProject] = useState([]);
-
   useEffect(() => {
     fetch(`http://localhost:3100/api/projects/`)
       .then((response) => response.json())
@@ -38,8 +37,8 @@ const ProjectArchive = ({ title, buildWith, linkedInLink, buildYear }) => {
               <tr>
                 <th>Year</th>
                 <th>Project</th>
-                <th>Build With</th>
-                <th>Link</th>
+                <th id={classes.opacityTerm}>Build With</th>
+                <th id={classes.opacityTerm}>Link</th>
               </tr>
             </thead>
             <tbody>
@@ -48,14 +47,17 @@ const ProjectArchive = ({ title, buildWith, linkedInLink, buildYear }) => {
                   <tr key={id} className={classes.projectRow}>
                     <td>{new Date(project.buildYear).getFullYear()}</td>
                     <td>{project.title}</td>
-                    <td className={classes.stackTD}>
+                    <td id={classes.opacityTerm} className={classes.stackTD}>
                       {project.buildWith.map((stack, id) => (
                         <span className={classes.projectStack} key={id}>
                           {stack}
                         </span>
                       ))}
                     </td>
-                    <td className={classes.projectLink}>
+                    <td
+                      id={classes.opacityTerm}
+                      className={classes.projectLink}
+                    >
                       <a
                         href={project.linkedInLink}
                         target="_blank"

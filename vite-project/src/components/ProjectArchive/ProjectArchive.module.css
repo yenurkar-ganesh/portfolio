@@ -86,7 +86,7 @@
 .tableHead {
   position: sticky;
   top: 15px;
-  background-color: rgb(240, 248, 255, 0.7);
+  background-color: rgb(240, 248, 255, 0.67);
 }
 
 .projectTable th {
@@ -111,4 +111,88 @@
 }
 .projectTable a:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN  */
+
+@media screen and (max-width: 586px) {
+  #opacityTerm {
+    display: none;
+  }
+  .tableHead {
+    background-color: none;
+    position: fixed;
+    top: 15px;
+  }
+  .archiveSection {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    position: relative;
+  }
+  .projectSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+  .projectTable {
+    max-width: 50% !important;
+    margin: 0px auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-left: aliceblue;
+  }
+  .projectLink:hover {
+    .linkIcon {
+      transform: scale(1.25);
+      color: #5eead4;
+    }
+  }
+  .stackTD {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .projectStack {
+    background-color: rgb(94, 234, 212, 0.11);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #5eead4;
+  }
+
+  .tableHead {
+    position: sticky;
+    top: 15px;
+    background-color: transparent;
+  }
+
+  .projectTable th {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 120px;
+    border-bottom: 1px solid rgb(240, 248, 255, 0.12);
+  }
+
+  .projectTable td {
+    padding: 10px;
+    border: transparent;
+    border-bottom: 1px solid rgb(240, 248, 255, 0.12);
+    padding: 21px 10px;
+    text-align: center;
+  }
+  .projectTable a {
+    color: #2196f3;
+    text-decoration: none;
+    align-items: center;
+  }
+  .projectTable a:hover {
+    text-decoration: underline;
+  }
 }
